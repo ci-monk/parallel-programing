@@ -12,7 +12,7 @@ int main(int argc, char const *argv[]){
 
   int num_threads;
 
-  printf("\nNos diga a quantidade de Threads deseja:\n");
+  printf("\nNos diga a quantidade de Threads desejada:\n");
   scanf("%d", &num_threads);
 
   omp_set_num_threads(num_threads);
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[]){
   // Fork
   #pragma opm parallel num_threads(4)
   {
-    printf("\nEntramos dentro do contexto paralelo...\n");
+    printf("Entramos dentro do contexto paralelo...\n");
     int num_threads = omp_get_num_threads();
     int thread_id = omp_get_thread_num();
     printf("\nEu sou a Thread %d de um total de %d\n", thread_id, num_threads);
