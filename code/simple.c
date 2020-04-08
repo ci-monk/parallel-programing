@@ -18,7 +18,7 @@ int main(int argc, char const *argv[]){
   omp_set_num_threads(num_threads);
 
   printf("\n1 - Estamos fora do contexto paralelo...\n");
-  // Fork-Join
+  // Fork
   #pragma opm parallel
   {
     printf("\nEntramos dentro do contexto paralelo...\n");
@@ -26,8 +26,17 @@ int main(int argc, char const *argv[]){
     int thread_id = omp_get_thread_num();
     printf("\nEu sou a Thread %d de um total de %d\n", thread_id, num_threads);
   }
-  // Fork-Join
+  // Join
   printf("\n2 - Estamos fora do contexto paralelo...\n\n");
+  // Fork
+  #pragma opm parallel num_threads(4)
+  {
+    printf("\nEntramos dentro do contexto paralelo...\n");
+    int num_threads = omp_get_num_threads();
+    int thread_id = omp_get_thread_num();
+    printf("\nEu sou a Thread %d de um total de %d\n", thread_id, num_threads);
+  }
+  // Join
   return 0;
 }
 
