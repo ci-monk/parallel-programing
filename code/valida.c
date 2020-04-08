@@ -1,11 +1,11 @@
-// simple.c
+// valida.c
 // compile with: /openmp
 #include <omp.h>
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
 
-#define NUM_THREADS 12
+#define NUM_THREADS 4
 
 void set_portuguese();
 void cabecalho();
@@ -16,33 +16,21 @@ int main(int argc, char const *argv[]){
 
   omp_set_num_threads(NUM_THREADS);
 
-  printf("\n1.1 - Estamos fora do contexto paralelo...\n\n");
+  printf("\nQuantidade de CPU(s): %d - Docker Limit...\n", omp_get_num_procs());
+
+  printf("\n1 - Estamos fora do contexto paralelo...\n\n");
 
   // Fork
   #pragma omp parallel
   {
-    int num_threads = omp_get_num_threads();
+    int id = omp_get_num_threads();
     int thread_id = omp_get_thread_num();
-    printf("Eu sou a Thread %d de um total de %d\n", thread_id, num_threads);
+    printf("Eu sou a Thread %d de um total de %d\n", thread_id, id);
   }
   // Join
 
-  printf("\n2.1 - Estamos fora do contexto paralelo...\n\n");
+  printf("\n2 - Estamos fora do contexto paralelo...\n\n");
 
-  printf("1.2 - Estamos fora do contexto paralelo...\n\n");
-
-  // Fork
-  #pragma omp parallel num_threads(4)
-  {
-    int num_threads = omp_get_num_threads();
-    int thread_id = omp_get_thread_num();
-    printf("Eu sou a Thread %d de um total de %d\n", thread_id, num_threads);
-  }
-  // Join
-
-  printf("\n2.2 - Estamos fora do contexto paralelo...\n\n");
-
-  return 0;
 }
 
 void set_portuguese(){
