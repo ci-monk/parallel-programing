@@ -1,16 +1,31 @@
-// procs.c
+// omp_master_procs.c
 // compile with: /openmp
+
+/* #############################################################################
+## DESCRIPTION: Using pragma omp master and omp_get_num_procs().
+## NAME: omp_master_procs.c
+## AUTHOR: Lucca Pessoa da Silva Matos
+## DATE: 10.04.2020
+## VERSION: 1.0
+## EXEMPLE:
+##     PS C:\> gcc -fopenmp -o omp_master_procs omp_master_procs.c
+##############################################################################*/
+
+// =============================================================================
+// LIBRARYS
+// =============================================================================
+
 #include <omp.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
+#include <stdlib.h>
 
 // =============================================================================
-// CALL FUNCTIONS TO BE USED IN MAIN
+// CALL FUNCTIONS
 // =============================================================================
 
-void set_portuguese();
 void cabecalho();
+void set_portuguese();
 
 // =============================================================================
 // MAIN
@@ -21,25 +36,25 @@ int main(int argc, char const *argv[]){
   set_portuguese();
   cabecalho();
 
-  printf("\nNúmero de processadores disponível no momento: %d", omp_get_num_procs());
+  printf("\nNum de processadores disponivel no momento: %d", omp_get_num_procs());
 
-  printf("\n1 - Entrando no contexto paralelo...\n");
+  printf("\n\n1 - Entrando no contexto paralelo...\n");
 
   #pragma omp parallel
   {
     #pragma omp master
     {
-      printf("\nNúmero de processadores disponível no momento: %d", omp_get_num_procs());
+      printf("\nNum de processadores disponivel no momento: %d", omp_get_num_procs());
     }
   }
 
-  printf("\n2 - Saindo do contexto paralelo...\n\n");
+  printf("\n\n2 - Saindo do contexto paralelo...\n\n");
 
   return 0;
 }
 
 // =============================================================================
-// DECLARE FUNCTIONS
+// FUNCTIONS
 // =============================================================================
 
 void set_portuguese(){

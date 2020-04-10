@@ -1,18 +1,37 @@
-// valida.c
+// omp_get_num_procs.c
 // compile with: /openmp
+
+/* #############################################################################
+## DESCRIPTION: Using omp_get_num_procs() to show your CPUS.
+## NAME: omp_get_num_procs.c
+## AUTHOR: Lucca Pessoa da Silva Matos
+## DATE: 10.04.2020
+## VERSION: 1.0
+## EXEMPLE:
+##     PS C:\> gcc -fopenmp -o omp_get_num_procs omp_get_num_procs.c
+##############################################################################*/
+
+// =============================================================================
+// LIBRARYS
+// =============================================================================
+
 #include <omp.h>
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
 
+// =============================================================================
+// MACROS
+// =============================================================================
+
 #define NUM_THREADS 4
 
 // =============================================================================
-// CALL FUNCTIONS TO BE USED IN MAIN
+// CALL FUNCTIONS
 // =============================================================================
 
-void set_portuguese();
 void cabecalho();
+void set_portuguese();
 
 // =============================================================================
 // MAIN
@@ -25,8 +44,7 @@ int main(int argc, char const *argv[]){
 
   omp_set_num_threads(NUM_THREADS);
 
-  printf("\nQuantidade de CPU(s): %d - Docker Limit...\n", omp_get_num_procs());
-
+  printf("\nQuantidade de CPU(s) disponíveis no momento: %d...\n", omp_get_num_procs());
   printf("\n1 - Estamos fora do contexto paralelo...\n\n");
 
   // Fork
@@ -39,11 +57,11 @@ int main(int argc, char const *argv[]){
   // Join
 
   printf("\n2 - Estamos fora do contexto paralelo...\n\n");
-
+  return 0;
 }
 
 // =============================================================================
-// DECLARE FUNCTIONS
+// FUNCTIONS
 // =============================================================================
 
 void set_portuguese(){

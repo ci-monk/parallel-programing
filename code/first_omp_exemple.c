@@ -1,5 +1,20 @@
-// simple.c
+// first_omp_exemple.c
 // compile with: /openmp
+
+/* #############################################################################
+## DESCRIPTION: Simple exemple with OpenMp.
+## NAME: first_omp_exemple.c
+## AUTHOR: Lucca Pessoa da Silva Matos
+## DATE: 10.04.2020
+## VERSION: 1.0
+## EXEMPLE:
+##     PS C:\> gcc -fopenmp -o first_omp_exemple first_omp_exemple.c
+##############################################################################*/
+
+// =============================================================================
+// LIBRARYS
+// =============================================================================
+
 #include <omp.h>
 #include <stdio.h>
 #include <locale.h>
@@ -8,11 +23,11 @@
 #define NUM_THREADS 12
 
 // =============================================================================
-// CALL FUNCTIONS TO BE USED IN MAIN
+// CALL FUNCTIONS
 // =============================================================================
 
-void set_portuguese();
 void cabecalho();
+void set_portuguese();
 
 // =============================================================================
 // MAIN
@@ -55,7 +70,7 @@ int main(int argc, char const *argv[]){
 }
 
 // =============================================================================
-// DECLARE FUNCTIONS
+// FUNCTIONS
 // =============================================================================
 
 void set_portuguese(){

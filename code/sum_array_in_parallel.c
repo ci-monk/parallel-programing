@@ -1,19 +1,38 @@
-// array.c
+// sum_array_in_parallel.c
 // compile with: /openmp
-#include<omp.h>
-#include<locale.h>
-#include<stdio.h>
-#include<stdlib.h>
+
+/* #############################################################################
+## DESCRIPTION: Vector sum in parallel with OpenMP.
+## NAME: sum_array_in_parallel.c
+## AUTHOR: Lucca Pessoa da Silva Matos
+## DATE: 10.04.2020
+## VERSION: 1.0
+## EXEMPLE:
+##     PS C:\> gcc -fopenmp -o sum_array_in_parallel sum_array_in_parallel.c
+##############################################################################*/
+
+// =============================================================================
+// LIBRARYS
+// =============================================================================
+
+#include <omp.h>
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+// =============================================================================
+// MACROS
+// =============================================================================
 
 #define MAX 100
+#define LOOP(i, n) for(int i = 0; i < n; i++)
 
 // =============================================================================
-// CALL FUNCTIONS TO BE USED IN MAIN
+// CALL FUNCTIONS
 // =============================================================================
 
-
-void set_portuguese();
 void cabecalho();
+void set_portuguese();
 
 // =============================================================================
 // MAIN
@@ -35,14 +54,14 @@ int main(int argc, char const *argv[]){
 
   //Inicializando valores para somar
   printf("\n\nPreenchendo os Arrays com os dados a serem somados");
-  for (i = 0; i < MAX; i++){
+  LOOP(i, MAX){
     A[i] = i * 2;
     B[i] = i * 3;
   }
 
   //Exibindo valores
   printf("\n\nExibindo valores dos Arrays A e B...\n\n");
-  for(i = 0; i < MAX; i++){
+  LOOP(i, MAX){
     printf("\t%d \t %d\n", A[i], B[i]);
   }
 
@@ -51,7 +70,7 @@ int main(int argc, char const *argv[]){
   //Realizando soma em paralelo - Usamos o shared para compartilhar os Arrays entre as Threads.
   //Naturalmente uma Thread não pode acessar a cópia de outra Thread.
   #pragma omp parallel for default(none) shared(A, B, C)
-  for(i = 0; i < MAX; i++){
+  LOOP(i, MAX){
     C[i] = A[i] + B[i];
   }
 
@@ -59,7 +78,7 @@ int main(int argc, char const *argv[]){
 
   //Exibindo valores
   printf("\n\nExibindo valores da soma dos Arrays...\n\n");
-  for(i = 0; i < MAX; i++){
+  LOOP(i, MAX){
     printf("\t%d\n", C[i]);
   }
 
@@ -74,7 +93,7 @@ int main(int argc, char const *argv[]){
 }
 
 // =============================================================================
-// DECLARE FUNCTIONS
+// FUNCTIONS
 // =============================================================================
 
 void set_portuguese(){
