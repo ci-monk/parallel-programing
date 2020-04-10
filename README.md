@@ -5,7 +5,7 @@
 <h1 align="center">💻 Parallel Programing with OpenMP 💻</h1>
 
 <p align="center">
-  <strong>Simple repository with some implementations about parallel programing using OpenMP</strong>
+  <strong>Simple repository with some parallel programing implementations using OpenMP</strong>
 </p>
 
 <p align="center">
