@@ -37,4 +37,4 @@ RUN find ./ -iname "*.o" -type f -exec chmod a+x {} \; -exec echo {} \;;
 
 ENTRYPOINT []
 
-CMD []
+CMD [ "./integral_solution_parallel" ]

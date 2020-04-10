@@ -54,7 +54,7 @@ int main(int argc, char const *argv[]){
 
   printf("\n2 - Estamos fora do contexto paralelo. Saindo...\n");
 
-  printf_s("\nNumber of threads: %d\n\n", contador);
+  printf("\nNumber of threads: %d\n\n", contador);
 
   return 0;
 }

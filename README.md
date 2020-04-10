@@ -5,7 +5,7 @@
 <h1 align="center">💻 Parallel Programing with OpenMP 💻</h1>
 
 <p align="center">
-  <strong>Simple repository with some parallel programing implementations using OpenMP</strong>
+  <strong>Some parallel programing implementations using OpenMP + Docker + Docker Compose</strong>
 </p>
 
 <p align="center">
@@ -47,8 +47,6 @@
 </p>
 
 <p align="center">
-  <a href="#built-with">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
 </p>
@@ -65,7 +63,7 @@ Pull requests are welcome. If you'd like to support the work and buy me a ☕, I
 
 <a href="https://www.buymeacoffee.com/EatdMck" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-## Functions (OpenMP)
+## OpenMP Functions
 
 ### Para execução do Ambiente
 
@@ -85,7 +83,7 @@ Pull requests are welcome. If you'd like to support the work and buy me a ☕, I
 
 ## 🐋 Development with Docker
 
-Steps to build the Docker image.
+Steps to build a Docker Image.
 
 ### Build
 
@@ -96,7 +94,7 @@ docker image build -t <IMAGE_NAME> . (This context)
 
 ### Run
 
-Steps to run the container.
+Steps to run a Docker Container.
 
 * **Linux** running:
 
@@ -115,13 +113,13 @@ For more information, access the [Docker](https://docs.docker.com/) documentatio
 
 ## 🐋 Development with Docker Compose
 
-Steps to run this integration with docker-compose.
+Build and run a docker-compose.
 
 ```bash
 docker-compose up --build
 ```
 
-Steps to down all services deployed by docker-compose.
+Down all services deployed by docker-compose.
 
 ```bash
 docker-compose down
@@ -136,6 +134,7 @@ docker-compose down --rmi all
 ## Link Reference
 
 * http://www.inf.ufsc.br/~bosco.sobral/ensino/ine5645/Exemplos-Diretivas-Clausulas.pdf
+* https://docs.microsoft.com/en-us/cpp/parallel/openmp/reference/openmp-functions?view=vs-2019
 
 ## 🎒 How to contribute
 

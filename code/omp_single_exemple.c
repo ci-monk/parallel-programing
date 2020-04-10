@@ -50,12 +50,12 @@ int main(int argc, char const *argv[]){
   {
     #pragma omp single
     // Only a single thread can read the input.
-    printf_s("Read input\n");
+    printf("Read input\n");
     // Multiple threads in the team compute the results.
-    printf_s("Compute results\n");
+    printf("Compute results\n");
     #pragma omp single
     // Only a single thread can write the output.
-    printf_s("Write output\n");
+    printf("Write output\n");
   }
 
   printf("\n2 - Estamos fora do contexto paralelo. Saindo...\n");

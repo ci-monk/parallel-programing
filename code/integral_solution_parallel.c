@@ -71,7 +71,7 @@ int main(int argc, char const *argv[]){
 
   tempo_final = omp_get_wtime() - tempo_inicial;
 
-  printf("\nO tempo gasto no contexto serial foi de: %lf\n", tempo_final);
+  printf("\nO tempo gasto no contexto paralelo foi de: %lf\n", tempo_final);
 
   pi = sum * step;
 
