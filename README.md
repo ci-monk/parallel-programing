@@ -111,7 +111,7 @@ docker container run -it --rm --name <CONTAINER_NAME> -p <LOCAL_PORT:CONTAINER_P
 winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 ```
 
-For more information, access the [Docker](https://docs.docker.com/) documentation or [this](docs/docker.md).
+For more information, access the [Docker](https://docs.docker.com/) documentation or [this](/docs/docker.md).
 
 ## 🐋 Development with Docker Compose
 
