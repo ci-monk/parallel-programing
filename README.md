@@ -136,70 +136,44 @@ docker-compose down --rmi all
 * http://www.inf.ufsc.br/~bosco.sobral/ensino/ine5645/Exemplos-Diretivas-Clausulas.pdf
 * https://docs.microsoft.com/en-us/cpp/parallel/openmp/reference/openmp-functions?view=vs-2019
 
-## 🎒 How to contribute
+## ➤ Author <a name = "author"></a>
 
-1. Make a **Fork**.
+👤 Hey!! If you like this project or if you find some bugs feel free to contact me in my channels:
 
-2. Follow the project organization.
+>
+> * Linktree: https://linktr.ee/lpmatos
+>
 
-3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard.
+## ➤ Versioning <a name = "versioning"></a>
 
-4. Make the **Commit**.
+To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
 
-5. Open a **Pull Request**.
+## ➤ Project status <a name = "project-status"></a>
 
-6. Wait for your pull request to be accepted.. 🚀
+This repository is a study project, therefore, it will not always be maintained 👻.
 
-Remember: There is no bad code, there are different views/versions of solving the same problem. 😊
+## ➤ Donations <a name = "donations"></a>
 
-## 🔔 Add to git and push
+<p align="center">
+  <a href="https://www.blockchain.com/pt/btc/address/bc1qn50elv826qs2qd6xhfh6n79649epqyaqmtwky5">
+    <img alt="BTC Address" src="https://img.shields.io/badge/BTC%20Address-black?style=for-the-badge&logo=bitcoin&logoColor=white">
+  </a>
 
-You must send the project to your GitHub after the modifications
+  <a href="https://live.blockcypher.com/ltc/address/ltc1qwzrxmlmzzx68k2dnrcrplc4thadm75khzrznjw/">
+    <img alt="Litecoin Address" src="https://img.shields.io/badge/Litecoin%20Address-black?style=for-the-badge&logo=litecoin&logoColor=white">
+  </a>
+</p>
 
-```bash
-git add -f .
-git commit -m "Added - Fixing somethings"
-git push origin master
-```
+## ➤ Show your support <a name = "show-your-support"></a>
 
-## 📋 Versioning
+<div align="center">
 
-- [CHANGELOG](CHANGELOG.md)
+Give me a ⭐️ if this project helped you!
 
-## 📜 License
+<p>
+  <img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="350px" float="center"/>
+</p>
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+Made with 💜 by [me](https://github.com/lpmatos) 👋 inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
-## ☎️ Contacts
-
-Hey!! If you like this project or if you find some bugs feel free to contact me in my channels:
-
-* **Email**: luccapsm@gmail.com
-* **Linkedin**: www.linkedin.com/in/lucca-pessoa-4abb71138/
-
-[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/lucca.pessoa.9)
-[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/lpmatos)
-
-## ✨ Contributors
-
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/parallel-programing/commits?author=lpmatos" title="Code">💻</a></a></td>
-  <tr>
-</table>
-
-## 🐯 Autor
-
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/parallel-programing/commits?author=lpmatos" title="Code">💻</a> <a href="#lpmatos" title="Design">🎨</a></td>
-  <tr>
-</table>
-
-## Project Status
-
-* 🔛 In production
-
----
-
-<p align="center">Feito com ❤️ by <strong>Lucca Pessoa :wave:</p>
+</div>
